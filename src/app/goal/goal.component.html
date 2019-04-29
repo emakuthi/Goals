@@ -1,0 +1,16 @@
+<h1>My Goals</h1>
+  <ul>
+    <div *ngFor ='let goal of goals;let i = index'>
+
+    <li appStrikethrough >{{goal.name}} </li>
+    <button (click)='toogleDetails(i)'>Toogle Details</button>
+
+    <app-goal-details *ngIf="goal.showDescription" [goal] = 'goal' (isComplete) = 'completeGoal($event,i)'></app-goal-details>
+  </div>
+  </ul>
+  <div *ngIf = 'goals.length > 5'>
+  <p  >You have too many goals</p>
+  <app-goal-details [goal] = 'goal'></app-goal-details>
+
+</div>
+
