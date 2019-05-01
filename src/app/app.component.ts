@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 // import { Goal} from './goal/goal.component';
+import {FormsModule} from '@angular/forms';
 
 import { Goal } from './goal';
 
@@ -8,6 +9,7 @@ import { Goal } from './goal';
   templateUrl: './app.component.html'
     
 })
+
 export class AppComponent {
   title ='Goals';
   goals = [
